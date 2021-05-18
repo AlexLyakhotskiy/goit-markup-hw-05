@@ -5,6 +5,8 @@
   --background-color-primal: #ffffff;
   --background-color-secondary: #2f303a;
   --primary-icon-color: #afb1b8;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
 }
 
 body {
@@ -104,6 +106,8 @@ p {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  transition: color var(--transition-time) var(--cubic);
 }
 
 .header-logo:focus,
@@ -125,6 +129,8 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color var(--transition-time) var(--cubic);
 }
 
 .nav-link:hover,
@@ -170,6 +176,8 @@ p {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  transition: color var(--transition-time) var(--cubic);
 }
 
 .address-text {
@@ -181,6 +189,8 @@ p {
   padding-bottom: 4px;
 
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--transition-time) var(--cubic);
 }
 
 .footer-logo:focus,
@@ -244,6 +254,8 @@ p {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+
+  transition: background-color var(--transition-time) var(--cubic);
 }
 
 .footer-icon {
@@ -293,6 +305,8 @@ p {
   min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
+
+  transition: background-color var(--transition-time) var(--cubic);
 }
 
 .hero-button:focus,
@@ -486,6 +500,9 @@ p {
   align-items: center;
 
   color: var(--primary-icon-color);
+
+  transition: color var(--transition-time) var(--cubic),
+    background-color var(--transition-time) var(--cubic);
 }
 
 .social-list .social-link:hover,
@@ -519,6 +536,9 @@ p {
   align-items: center;
 
   cursor: pointer;
+
+  transition: color var(--transition-time) var(--cubic),
+    border-color var(--transition-time) var(--cubic);
 }
 
 .clients-icon {
@@ -559,6 +579,10 @@ p {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+
+  transition: color var(--transition-time) var(--cubic),
+    background-color var(--transition-time) var(--cubic),
+    box-shadow var(--transition-time) var(--cubic);
 }
 
 .portfolio-button:hover,
@@ -578,6 +602,8 @@ p {
 .portfolio-list .item {
   width: calc((100% - 90px) / 3);
   margin: 15px;
+
+  transition: box-shadow var(--transition-time) var(--cubic);
 }
 
 .portfolio-img {
@@ -599,9 +625,10 @@ p {
   height: 100%;
   padding: 63px 24px;
   transform: translateY(100%);
-  transition: transform 250ms;
 
   background: rgba(33, 150, 243, 0.9);
+
+  transition: transform var(--transition-time) var(--cubic);
 }
 
 .card-text {
@@ -619,11 +646,13 @@ p {
   border-top: none;
 }
 
-.portfolio-list .item:hover .card-label {
+.portfolio-list .item:hover .card-label,
+.portfolio-list .item:focus .card-label {
   transform: translateY(0);
 }
 
-.portfolio-list .item:hover {
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -647,11 +676,14 @@ p {
   position: fixed;
   top: 0;
   left: 0;
+  opacity: 1;
 
   width: 100%;
   height: 100%;
 
   background: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--transition-time) var(--cubic);
 }
 
 .backdrop.is-hidden {
@@ -687,6 +719,9 @@ p {
   background-color: var(--background-color-primal);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: color var(--transition-time) var(--cubic),
+    background-color var(--transition-time) var(--cubic);
 }
 
 .modal-button:hover,
